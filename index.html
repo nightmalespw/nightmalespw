@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="gpN2O3lFrIKVgIDR7Fz0Th5Ebr5PVnZrCYNXdbWIf2s" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .info, .contact-info {
+      margin-bottom: 20px;
+      font-size: 14px; /* 改为稍大字体 */
+    }
+
+    .contact-info a {
+      font-size: 14px; /* 改为稍大字体 */
+    }
+
+    .info {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 10px auto;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th:nth-child(1), th:nth-child(2), td:nth-child(1), td:nth-child(2) {
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #007bff;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    select, input[type="text"] {
+      width: calc(45% - 5px);
+      padding: 6px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .search-container {
+      display: flex;
+      margin-top: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    td:nth-child(3) {
+      font-size: 12px;
+    }
+
+    th:nth-child(2), td:nth-child(2) {
+      white-space: nowrap;
+    }
+
+    td:nth-child(1) {
+      white-space: nowrap;
+    }
+
+    .video, .video + span {
+      color: #edb40b; 
+    }
+
+    .audio, .audio + span {
+      color: #f7977f; 
+    }
+
+    .green, .green + span {
+      color: #008000; 
+    }
+
+    .highlighted-text {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* 修改图片样式 */
+    .highlighted-text img {
+      max-width: 70%; /* 将图片大小调整为原大小的一半 */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<h1>雨恋女陪殿</h1>
+
+<p class="contact-info"><b style="color: red;">速子云VPN：</b><a href="https://get.suzi03.xyz/#/register?code=woG7P9dl">自用靠谱，良心推荐，点击跳转官网使用</a></p>
+<p class="contact-info"><b>下单联系管理：</b><a href="点击链接加入群聊【雨恋咨询裙9⃣️】：http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=q4NEuKOGVuGFZHVclSVCG51QjUc3Ugz5&authKey=ldo%2B9hQVIK0d9AC7TbPIuFiKMKLIg7II9xHd78zQzNgCDECsJTNpiU25RHX%2FgFD1&noverify=0&group_code=921979173">q群:921979173（点击会跳转进群）</a></p>
+<!-- <p class="contact-info"><b>电报简介下单：</b><a href="https://t.me/YuLianPw01">https://t.me/YuLianPw01</a></p> -->
+<p><b style="color: red;">除此外一律不要信！！</b>q群认准管理，有主动你好友的是骗子，已有被骗重点提醒！</p>
+
+<div class="highlighted-text">
+  <p><b style="color: red;">只有线上， </b><b>主营：磕炮、视频1v1！</b>价格便宜优质！</p>
+  <p><b>营业时间：</b>下午5点~凌晨5点</p>
+  <p>磕炮（不懂百度）不互动不说话不会磕等等 每10分钟少2分钟，远控、水声等等也是附加</p>
+  <p>视频单都是除了脸外都可以看纯视频，其他露脸、丝袜、选衣服、道具、插入等等都是额外附加的</p>
+  <p>板板喜欢可以入门，入门后下单会便宜20%左右，<b style="color: red;">但入门后私下任何就与雨恋无关噜</b></p>
+  <p><b style="color: red;">点视频选人：</b><a href="twitter://user?screen_name=yulian_sp11">点击跳转twi推特！！</a></p>
+  <p><b style="color: red;">点磕炮选人：</b><a href="twitter://user?screen_name=yulian_kp">点击跳转twi推特！！</a></p>
+</div>
+
+<button onclick="toggleInfo()">显示陪陪类说明</button>
+
+<div class="info">
+  <p><b><span class="video">视频陪</span>:</b> 会接视频11（没标注接露脸，都是不接露脸）</p>
+  <p><b><span class="audio">女喘陪</span>:</b> 会接磕炮，但不接颜色视频</p>
+  <p><b><span class="green">绿色陪</span>:</b> 只接绿色单子，要搞颜色别找</p>
+</div>
+
+<div class="search-container">
+  <select id="tagSelect" onchange="filterByTag()">
+    <option value="视频陪">视频陪</option>
+    <option value="女喘陪">女喘陪</option>
+    <option value="绿色陪">绿色陪</option>
+  </select>
+
+  <input type="text" id="keywordInput" placeholder="关键字搜索" oninput="filterByKeyword()">
+</div>
+
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>昵称</th>
+      <th>社媒</th>
+      <th>介绍</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小u愁</td>
+      <td><a href="twitter://user?screen_name=kitten_ouo">twi</a></td>
+      <td>🚪188/520（188＋q送部分福利视频，520+v所有福利电报群）,接视频11有衣服选198/10分，入门解锁露脸 乳夹/手链/口球/尾巴/高潮喷水/洗澡 等等附加项目</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小艾</td>
+      <td><a href="twitter://user?screen_name=yulian_xiaoai">twi</a></td>
+      <td>🚪200（送视频单10min）,视频单140/10分、丝袜+15、选衣服+30，照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小琪</td>
+      <td><a href="twitter://user?screen_name=FKira85719">twi</a></td>
+      <td>🚪188（送送视频单10min，视频不入门直接点125/10），有各种丝袜 衣服洛丽塔/汉服/jk都有</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.乖</td>
+      <td><a href="twitter://user?screen_name=xiaoxiao474">twi</a></td>
+      <td>🚪188（音频福利或磕20min二选一，kp60/10，水声+15，+远控+15） 接磕炮有小玩具可远控，音频定制</td>
+    </tr>
+    <tr class="green" data-tags="绿色陪">
+      <td>𝙔𝙡.林甜</td>
+      <td><a href="https://v.douyin.com/iN4fYmSm/">dy</a></td>
+      <td>🚪118送半小时语聊，接连麦/哄睡/王者/永劫</td>
+    </tr>
+    <tr class="green" data-tags="绿色陪">
+      <td>𝙔𝙡.十四</td>
+      <td><a href="https://v.douyin.com/i23pSdQB/">dy</a></td>
+      <td>🚪118送半小时语聊，接连麦/哄睡/虚恋/王者/铲铲</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小熊</td>
+      <td><a href="twitter://user?screen_name=mgxiaoxiong">twi</a></td>
+      <td>🚪188（送电报福利群，视频单125/10）,接视频11，照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小气鬼</td>
+      <td><a href="twitter://user?screen_name=yulian_mgxqg">twi</a></td>
+      <td>🚪198（送视频单10min，视频单128/10）,接接视频11，入门解锁跳单、假阳具、远程小恶魔、炮机、爆菊/照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.慢慢</td>
+      <td><a href="twitter://user?screen_name=LoveMeoRou">twi</a></td>
+      <td>🚪188/238（送视频单10min，238的露脸）,视频单125/10/接视频11/照片视频定制</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小面包</td>
+      <td><a href="twitter://user?screen_name=yulian_xmb">twi</a></td>
+      <td>🚪138（送磕10min） 接磕炮/定制音频/王者//哄睡</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.snow</td>
+      <td><a href="twitter://user?screen_name=yulian_snow">twi</a></td>
+      <td>🚪152/188（送磕10min/30min）kp66/10，88/20， 接磕炮，音频定制，连麦/虚恋/永劫</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.蛋挞</td>
+      <td><a href="twitter://user?screen_name=expect0t">twi</a></td>
+      <td>🚪288（送福利照片视频）,接视频11(需要入门预约时间)，照片视频定制，接游戏陪玩(金铲铲 瓦 云顶 还有别的一些steam游戏)</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.萝贝</td>
+      <td><a href="twitter://user?screen_name=welkinovo">twi</a></td>
+      <td>🚪188（解锁全套完整未公开音频+持续免费更新+私v+送定制五分钟） 接专属定制音频/哄睡ASMR助眠/语音条</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小y</td>
+      <td><a href="twitter://user?screen_name=yingyy52">twi</a></td>
+      <td>🚪138/188（138送k十分钟，188+音频福利，kp60/10） 接磕炮/定制音频/王者/铲铲/无畏/云顶/哄睡</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小悔</td>
+      <td><a href="twitter://user?screen_name=y4153053695430">twi</a></td>
+      <td>🚪138/188（138送k十分钟+音频福利，kp60/10） 接磕炮/定制音频/王者/铲铲/无畏/云顶/哄睡</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.喵</td>
+      <td><a href="twitter://user?screen_name=AlyssaBrow23917">twi</a></td>
+      <td>🚪138（送磕10min）接磕炮，音频定制，连麦/王者/蛋仔</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.难眠</td>
+      <td><a href="twitter://user?screen_name=Lowky1n">twi</a></td>
+      <td>🚪188（送磕10min，kp70/10）接磕炮，音频定制，连休/游戏/看电影</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.水桃</td>
+      <td><a href="twitter://user?screen_name=shuitao626">twi</a></td>
+      <td>🚪188/388/520（送福利音频、视频）接磕炮，举牌，照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小绵</td>
+      <td><a href="twitter://user?screen_name=Yulian_xm">twi</a></td>
+      <td>🚪188（送视频单10min，视频单125/10）,接视频11，照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小欢</td>
+      <td><a href="twitter://user?screen_name=LoveMeHuan">twi</a></td>
+      <td>🚪188（送视频单10min）,接视频11，照片视频定制</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.冉崽</td>
+      <td><a href="twitter://user?screen_name=ermiq31633331">twi</a></td>
+      <td>🚪188（送视频十分钟可选个玩具，视频单+玩具108/10）,接接视频11，照片视频定制</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小孤单</td>
+      <td><a href="twitter://user?screen_name=yulian_hba">twi</a></td>
+      <td>🚪188（送福利照片音频，kp60/10）接游戏陪玩/哄睡/磕炮/音频定制/电子女友</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.心动</td>
+      <td><a href="twitter://user?screen_name=yulian_xdy">twi</a></td>
+      <td>🚪138（送kp+远控十分钟，kp+远控60/10）接游戏陪玩/哄睡/磕炮/音频定制/电子女友</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.kot</td>
+      <td><a href="twitter://user?screen_name=koeebot">twi</a></td>
+      <td>🚪188（kp70/10）接游戏陪玩/哄睡/磕炮/音频定制/电子女友</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小可</td>
+      <td><a href="twitter://user?screen_name=zhongerbing20">twi</a></td>
+      <td>🚪188 接游戏陪玩/哄睡/磕炮/音频定制/电子女友</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小酒</td>
+      <td><a href="twitter://user?screen_name=xiaojiu06">twi</a></td>
+      <td>🚪188（送视频单10min）,接视频11，照片视频定制</td>
+    </tr>
+    <tr class="audio" data-tags="女喘陪">
+      <td>𝙔𝙡.小兔</td>
+      <td><a href="twitter://user?screen_name=RoseElsie7">twi</a></td>
+      <td>🚪168（送腿单+kp 10分钟，腿单+kp75/10）接游戏陪玩/哄睡/磕炮/音频定制/电子女友</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小猫</td>
+      <td><a href="twitter://user?screen_name=yulian_milkcat">twi</a></td>
+      <td>🚪200（送涩涩福利视频）,接视频11/磕炮/照片视频定制/绿色都可以接/线上甜心女友</td>
+    </tr>
+    <tr class="video" data-tags="视频陪">
+      <td>𝙔𝙡.小雨</td>
+      <td><a href="twitter://user?screen_name=yulian_rain">twi</a></td>
+      <td>🚪520（送电报福利群，视频单188/10）,少萝jk饱饱/接视频11/磕炮/照片视频定制/绿色都可以接</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+function toggleInfo() {
+  var info = document.querySelector('.info');
+  info.style.display = info.style.display === 'block' ? 'none' : 'block';
+}
+
+function filterByTag() {
+  var selectedTag = document.getElementById("tagSelect").value;
+  var rows = document.querySelectorAll("#myTable tbody tr");
+
+  rows.forEach(function(row) {
+    var tags = row.getAttribute("data-tags").split(" ");
+    row.style.display = tags.includes(selectedTag) ? "" : "none";
+  });
+}
+
+function filterByKeyword() {
+  var keyword = document.getElementById("keywordInput").value.toUpperCase();
+  var rows = document.querySelectorAll("#myTable tbody tr");
+
+  rows.forEach(function(row) {
+    var cells = row.getElementsByTagName("td");
+    var found = false;
+    Array.from(cells).forEach(function(cell) {
+      if (cell.textContent.toUpperCase().indexOf(keyword) > -1) {
+        found = true;
+      }
+    });
+    row.style.display = found ? "" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
